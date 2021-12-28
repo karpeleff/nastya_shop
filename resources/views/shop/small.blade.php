@@ -36,7 +36,7 @@
                     <div class="col-sm-6 col-md-3 col-lg-3">
                         <div class="shop-item">
                             <div class="shop-item-image"><img src="assets/images/shop/product-7.jpg" alt="Accessories Pack"/>
-                                <div class="shop-item-detail"><a class="btn btn-round btn-b"><span class="icon-basket">Add To Cart</span></a></div>
+                                <div class="shop-item-detail"><a class="btn btn-round btn-b"><span class="icon-basket">Заказать</span></a></div>
                             </div>
                             <h4 class="shop-item-title font-alt"><a href="#">Accessories Pack</a></h4>£9.00
                         </div>
