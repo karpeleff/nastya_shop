@@ -11,7 +11,9 @@ class ShopController extends Controller
 
     public function index()
     {
-        return view('shop/index');
+        $link = $this->parser('202031912');
+
+        return view('shop/index',['link'=>$link]);
     }
 
     public function land()

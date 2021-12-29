@@ -29,19 +29,22 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6 col-sm-offset-3">
-                        <h2 class="module-title font-alt">Latest in clothing</h2>
+                        <h2 class="module-title font-alt">новинки</h2>
                     </div>
                 </div>
                 <div class="row multi-columns-row">
-                    <div class="col-sm-6 col-md-3 col-lg-3">
-                        <div class="shop-item">
-                            <div class="shop-item-image"><img src="assets/images/shop/product-7.jpg" alt="Accessories Pack"/>
-                                <div class="shop-item-detail"><a class="btn btn-round btn-b"><span class="icon-basket">Add To Cart</span></a></div>
+                    @foreach ($link  as $item)
+                        <div class="col-sm-6 col-md-3 col-lg-3">
+                            <div class="shop-item">
+                                <div class="shop-item-image"><img src="{{$item['url']}}" alt="Accessories Pack"/>
+                                    <div class="shop-item-detail"><a class="btn btn-round btn-b"><span class="icon-basket"> Заказать</span></a></div>
+                                </div>
+                                <h4 class="shop-item-title font-alt"><a href="#">Accessories Pack</a></h4>£9.00
                             </div>
-                            <h4 class="shop-item-title font-alt"><a href="#">Accessories Pack</a></h4>£9.00
                         </div>
-                    </div>
-                    <div class="col-sm-6 col-md-3 col-lg-3">
+                    @endforeach
+
+                   <!-- <div class="col-sm-6 col-md-3 col-lg-3">
                         <div class="shop-item">
                             <div class="shop-item-image"><img src="assets/images/shop/product-8.jpg" alt="Men’s Casual Pack"/>
                                 <div class="shop-item-detail"><a class="btn btn-round btn-b"><span class="icon-basket">Add To Cart</span></a></div>
@@ -96,10 +99,10 @@
                             </div>
                             <h4 class="shop-item-title font-alt"><a href="#">Cold Garb</a></h4>£14.00
                         </div>
-                    </div>
+                    </div>-->
                 </div>
                 <div class="row mt-30">
-                    <div class="col-sm-12 align-center"><a class="btn btn-b btn-round" href="#">See all products</a></div>
+                    <div class="col-sm-12 align-center"><a class="btn btn-b btn-round" href="#">смотреть еще</a></div>
                 </div>
             </div>
         </section>
