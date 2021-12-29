@@ -26,9 +26,9 @@ class ShopController extends Controller
         return view('shop/small');
     }
 
-    public function small_single_product()
+    public function order_product()
     {
-        return view('shop/small_single_product');
+        return view('shop/order_product');
     }
 
     public function cart()
