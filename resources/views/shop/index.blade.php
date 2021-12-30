@@ -7,17 +7,17 @@
                 <li class="bg-dark-30 bg-dark shop-page-header" style="background-image:url(&quot;assets/images/shop/slider1.png&quot;);">
                     <div class="titan-caption">
                         <div class="caption-content">
-                            <div class="font-alt mb-30 titan-title-size-1">This is Titan</div>
-                            <div class="font-alt mb-30 titan-title-size-4"> Summer 2017</div>
-                            <div class="font-alt mb-40 titan-title-size-1">Your online fashion destination</div><a class="section-scroll btn btn-border-w btn-round" href="#latest">Learn More</a>
+                            <div class="font-alt mb-30 titan-title-size-1">This is   Service Box</div>
+                            <div class="font-alt mb-30 titan-title-size-4">Service Box</div>
+                            <div class="font-alt mb-40 titan-title-size-1">Быстрая доставка ваших пожеланий</div><a class="section-scroll btn btn-border-w btn-round" href="#latest">Подробнее</a>
                         </div>
                     </div>
                 </li>
                 <li class="bg-dark-30 bg-dark shop-page-header" style="background-image:url(&quot;assets/images/shop/slider3.png&quot;);">
                     <div class="titan-caption">
                         <div class="caption-content">
-                            <div class="font-alt mb-30 titan-title-size-1"> This is Titan</div>
-                            <div class="font-alt mb-40 titan-title-size-4">Exclusive products</div><a class="section-scroll btn btn-border-w btn-round" href="#latest">Learn More</a>
+                            <div class="font-alt mb-30 titan-title-size-1"> This is Service Box</div>
+                            <div class="font-alt mb-40 titan-title-size-4">Быстрая доставка ваших пожеланий</div><a class="section-scroll btn btn-border-w btn-round" href="#latest">Подробнее</a>
                         </div>
                     </div>
                 </li>
@@ -34,14 +34,25 @@
                 </div>
                 <div class="row multi-columns-row">
                     @foreach ($link  as $item)
-                        <div class="col-sm-6 col-md-3 col-lg-3">
-                            <div class="shop-item">
-                                <div class="shop-item-image"><img src="{{$item['url']}}" alt="Accessories Pack"/>
-                                    <div class="shop-item-detail"><a class="btn btn-round btn-b"><span class="icon-basket"> Заказать</span></a></div>
+
+                            <div class="col-sm-6 col-md-3 col-lg-3">
+                                <div class="shop-item">
+                                    <div class="shop-item-image"><img src="{{$item['url']}}" alt="Accessories Pack"/>
+                                        <form method="post" action="/order_product">
+                                            @csrf
+                                            <input type="hidden" name="date" value="">
+                                            <input type="hidden" name="url" value="">
+                                            <input type="hidden" name="pbl_id" value="">
+                                        <div class="shop-item-detail"> <button class="btn btn-default btn-round" type="submit">Заказать</button></div>
+
+                                        </form>
+                                    </div>
+                                    <h4 class="shop-item-title font-alt"><a href="#"></a></h4>
+                                    <h4 class="shop-item-title font-alt"><a href="#"></a></h4>
                                 </div>
-                                <h4 class="shop-item-title font-alt"><a href="#">Accessories Pack</a></h4>£9.00
                             </div>
-                        </div>
+
+
                     @endforeach
 
                    <!-- <div class="col-sm-6 col-md-3 col-lg-3">

@@ -9,9 +9,9 @@ use VK\Client\VKApiClient;
 class ShopController extends Controller
 {
 
-    public function index()
+    public function index($id = 202031912)
     {
-        $link = $this->parser('202031912');
+        $link = $this->parser($id);
 
         return view('shop/index',['link'=>$link]);
     }
@@ -26,8 +26,11 @@ class ShopController extends Controller
         return view('shop/small');
     }
 
-    public function order_product()
+    public function order_product(Request  $request)
     {
+          dd($request->input());
+
+
         return view('shop/order_product');
     }
 
@@ -44,9 +47,12 @@ return view('shop/order_confirm');
 
     public  function  test()
     {
-       $res = $this->parser();
-        dd($res);
-        return view('shop/test',['res'=> $res]);
+        // $this->get_info('202031912','1640323049');
+        $this->GetMarket();
+
+     //  $res = $this->parser();
+       // dd($res);
+       // return view('shop/test',['res'=> $res]);
         //$res = $this->get_file();
       //  $res = $this->get_photos('202031912');
        // $res = $this->get_notes_wall('202031912');
@@ -56,7 +62,7 @@ return view('shop/order_confirm');
 
     public function get_photos($pbl_id)
     {
-        $access_token = '128a04037b775f25a71febadff69a3fc4885393b87799f1f806068f69f2cd6f9f5b9411dd7be399bb5af5';
+        $access_token = '9939d093c3ee10d37325b8d77e4087ac15ac53bf7c96e6895e88cc5fc198773a5e488ea7cc538f6775209';
         $vk = new VKApiClient();
         $response = $vk->photos()->get($access_token, array(
              'extended' => 1,
@@ -72,9 +78,15 @@ return view('shop/order_confirm');
          $result = json_encode($response);
          $date = date("d.m.y");
          $file = 'photo/photo_'.$pbl_id.'_'.$date . '.json';
+
+        if(file_exists($file))
+        {
+            unlink($file);
+        }
          $current = fopen($file, "a");
          fwrite($current, $result);// сохраняем в файл  202031912
          fclose($current);
+         return 'ok';
 
 
 
@@ -84,7 +96,8 @@ return view('shop/order_confirm');
 
     public function get_notes_wall($pbl_id)
     {
-        $access_token = '128a04037b775f25a71febadff69a3fc4885393b87799f1f806068f69f2cd6f9f5b9411dd7be399bb5af5';
+        //$access_token = '128a04037b775f25a71febadff69a3fc4885393b87799f1f806068f69f2cd6f9f5b9411dd7be399bb5af5';
+        $access_token = '9abe00620e78b130ad4b09b542e5fd4b35a44a292cb8721e9141cf55739d011d24ae0b438a8c29a35bf41';
         $vk = new VKApiClient();
         $response = $vk->wall()->get($access_token, array(
             'extended' => 1,
@@ -112,14 +125,18 @@ return view('shop/order_confirm');
 
         $file = 'photo/photo_'.$pbl_id.'_'.$date . '.json';
 
+
+
         $out =  file_get_contents($file);
        // dd($out);
 
         $data = (json_decode($out,true));
 
+       // dd($data);
+
         //$arr = $data['items'];
 
-        //dd($data['items']);
+       // /dd($data['items']);
         $link = [];
         $i = 0;
 
@@ -130,7 +147,7 @@ return view('shop/order_confirm');
       // echo $item['attachments'][0]['photo']['sizes'][1]['url'];
      // $link[$i] = $item['sizes'][7]['url'];
      // $link[$i]  = ['url'=>  $item['sizes'][7]['url'],'text' => $item['text']];
-       $link[$i]  = ['date'=>  $item['date'],'url' => $item['sizes'][7]['url']];
+       $link[$i]  = ['date_mark'=>  $item['date'],'url' => $item['sizes'][7]['url'],'pbl_id' => $pbl_id];
       $i++;
 
   }
@@ -152,6 +169,106 @@ return view('shop/order_confirm');
         fclose($current);
     }
 
+        public function get_info($pbl_id,$date_mark)
+        {
+              $date =  date("d.m.y");
+
+               $file = 'wall/wall_text_'.$pbl_id.'_'.$date . '.json';
+
+               $out =  file_get_contents($file);
+              // dd($out);
+
+               $data = (json_decode($out,true));
+
+               //$arr = $data['items'];
+
+              // dd($data['items']);
+               $result = [];
+               $i = 0;
+
+            foreach ($data['items'] as $item) {
+
+              // echo $item['date'];
+              // echo '<br>';
+
+                if($item['date'] == $date_mark)
+                {
+                    echo  $item['text'];
+                    echo '<br>';
+                   $text = $this->remove_emoji($item['text']);
+
+                    echo $text;
+
+                }
+            }
+
+
+
+             // return  $res  507d0fc0507d0fc0507d0fc0d2500781b45507d507d0fc031bd92ce2ac483ab7d37c00c
+        }
+
+ public   function GetMarket($pbl_id)
+ {
+    // $access_token = '128a04037b775f25a71febadff69a3fc4885393b87799f1f806068f69f2cd6f9f5b9411dd7be399bb5af5';
+     $access_token = '9939d093c3ee10d37325b8d77e4087ac15ac53bf7c96e6895e88cc5fc198773a5e488ea7cc538f6775209';
+     $vk = new VKApiClient();
+     $response = $vk->market()->get($access_token, array(
+         'extended' => 1,
+         'owner_id' => array('-' . $pbl_id),
+        // 'rev' => 1,
+       //  'count' => 10,
+        'offset'=> 0,
+        // 'album_id' => 'wall',
+         // 'fields' => array('city', 'photo','contacts'),
+
+     ));
+
+    // dd($response);
+     $result = json_encode($response);
+     $date = date("d.m.y");
+     $file = 'market/market_text_'.$pbl_id.'_'.$date . '.json';
+     $current = fopen($file, "a");
+     fwrite($current, $result);// сохраняем в файл  202031912    198253699
+     fclose($current);
+     return 'ok';
+ }
+
+    function  parser_market($pbl_id)
+    {
+        $date =  date("d.m.y");
+
+        $file = 'market/market_text_'.$pbl_id.'_'.$date . '.json';
+
+        $out =  file_get_contents($file);
+        // dd($out);
+
+        $data = (json_decode($out,true));
+
+        //$arr = $data['items'];
+        // dd($data);
+        //dd($data['items']);
+        $link = [];
+        $i = 0;
+
+        foreach($data['items'] as $item)
+        {
+            $link[$i]  = ['category'=>  $item['category']['name'],
+                          'description' => $item['description'],
+                          'url'     =>  $item['photos'][0]['sizes'][7]['url'],
+            ];
+            //dd($item);
+            //
+            // echo $item['attachments'][0]['photo']['sizes'][1]['url'];
+            // $link[$i] = $item['sizes'][7]['url'];
+            // $link[$i]  = ['url'=>  $item['sizes'][7]['url'],'text' => $item['text']];
+           // $link[$i]  = ['date_mark'=>  $item['date'],'url' => $item['sizes'][7]['url'],'pbl_id' => $pbl_id];
+            $i++;
+
+        }
+        return  $link;
+        //dd($link);
+
+    }
 
 
 

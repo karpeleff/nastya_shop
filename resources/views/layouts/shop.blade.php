@@ -66,19 +66,19 @@
     <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
-                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#custom-collapse"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="index.html">service box</a>
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#custom-collapse"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="/">service box</a>
             </div>
             <div class="collapse navbar-collapse" id="custom-collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Заказы</a>
                         <ul class="dropdown-menu">
-                            <li><a href="">Женская одежда</a></li>
+                            <li><a href="/198253699">Женская одежда</a></li>
                             <li><a href="">Детская одежда</a></li>
                             <li><a href="">Мужская одежда</a></li>
-                            <li><a href="">Нижнее белье</a></li>
+                            <li><a href="/202031912">Нижнее белье</a></li>
                             <li><a href="">Верхняя одежда</a></li>
                             <li><a href="">Носки колготки</a></li>
-                            <li><a href="">Обувь</a></li>
+                            <li><a href="/205928804">Обувь</a></li>
                             <li><a href="">Парфюмерия Косметика</a></li>
                             <li><a href="">Электроника</a></li>
                         </ul>
@@ -313,14 +313,14 @@
                     <!--                    |-->
                     <!--                    button.search-btn(type='submit')-->
                     <!--                        i.fa.fa-search-->
-                    <li class="dropdown"><a class="dropdown-toggle" href="documentation.html" data-toggle="dropdown">Documentation</a>
+                    <li class="dropdown"><a class="dropdown-toggle" href="documentation.html" data-toggle="dropdown">Обратная связь</a>
                         <ul class="dropdown-menu">
-                            <li><a href="documentation.html#contact">Contact Form</a></li>
-                            <li><a href="documentation.html#reservation">Reservation Form</a></li>
-                            <li><a href="documentation.html#mailchimp">Mailchimp</a></li>
-                            <li><a href="documentation.html#gmap">Google Map</a></li>
-                            <li><a href="documentation.html#plugin">Plugins</a></li>
-                            <li><a href="documentation.html#changelog">Changelog</a></li>
+                            <li><a href="">Регистрация</a></li>
+                            <li><a href="">Восстановить пароль</a></li>
+                            <li><a href="">О сервисе</a></li>
+                            <li><a href=""></a></li>
+                            <li><a href="">Plugins</a></li>
+                            <li><a href="">Changelog</a></li>
                         </ul>
                     </li>
                 </ul>
