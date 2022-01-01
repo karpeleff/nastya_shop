@@ -86,7 +86,7 @@
 
                     <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Услуги</a>
                         <ul class="dropdown-menu">
-                            <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">About</a>
+                            <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">ногти</a>
                                 <ul class="dropdown-menu">
                                     <li><a href="about1.html">About 1</a></li>
                                     <li><a href="about2.html">About 2</a></li>
@@ -102,13 +102,13 @@
                                     <li><a href="">Пластиковые окна</a></li>
                                 </ul>
                             </li>
-                            <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Pricing</a>
+                            <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">суши роллы</a>
                                 <ul class="dropdown-menu">
                                     <li><a href="pricing1.html">Pricing 1</a></li>
                                     <li><a href="pricing2.html">Pricing 2</a></li>
                                 </ul>
                             </li>
-                            <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Gallery</a>
+                            <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">стрижка укладка</a>
                                 <ul class="dropdown-menu">
                                     <li><a href="gallery_col_2.html">2 Columns</a></li>
                                     <li><a href="gallery_col_3.html">3 Columns</a></li>
@@ -150,11 +150,11 @@
                                     <li><a href="portfolio_boxed_gutter_col_4.html">Кошечки Собачки</a></li>
                                 </ul>
                             </li>
-                            <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Full Width</a>
+                            <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Бытовая техника</a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="portfolio_full_width_col_2.html">2 Columns</a></li>
-                                    <li><a href="portfolio_full_width_col_3.html">3 Columns</a></li>
-                                    <li><a href="portfolio_full_width_col_4.html">4 Columns</a></li>
+                                    <li><a href="portfolio_full_width_col_2.html">электроника</a></li>
+                                    <li><a href="portfolio_full_width_col_3.html">смартфоны</a></li>
+                                    <li><a href="portfolio_full_width_col_4.html">компьютеры</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Full Width - Gutter</a>
@@ -212,7 +212,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Blog</a>
+                    <!--<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Blog</a>
                         <ul class="dropdown-menu" role="menu">
                             <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Standard</a>
                                 <ul class="dropdown-menu">
@@ -265,7 +265,7 @@
                             <li><a href="shop_single_product.html">Single Product</a></li>
                             <li><a href="shop_checkout.html">Checkout</a></li>
                         </ul>
-                    </li>
+                    </li>-->
                     <!--li.dropdown.navbar-cart-->
                     <!--    a.dropdown-toggle(href='#', data-toggle='dropdown')-->
                     <!--        span.icon-basket-->
@@ -313,14 +313,14 @@
                     <!--                    |-->
                     <!--                    button.search-btn(type='submit')-->
                     <!--                        i.fa.fa-search-->
-                    <li class="dropdown"><a class="dropdown-toggle" href="documentation.html" data-toggle="dropdown">Обратная связь</a>
+                    <li class="dropdown"><a class="dropdown-toggle" href="documentation.html" data-toggle="dropdown">контакты</a>
                         <ul class="dropdown-menu">
                             <li><a href="">Регистрация</a></li>
                             <li><a href="">Восстановить пароль</a></li>
                             <li><a href="">О сервисе</a></li>
+                            <li><a href="">напишите нам</a></li>
                             <li><a href=""></a></li>
-                            <li><a href="">Plugins</a></li>
-                            <li><a href="">Changelog</a></li>
+                            <li><a href=""></a></li>
                         </ul>
                     </li>
                 </ul>

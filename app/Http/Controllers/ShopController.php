@@ -3,13 +3,23 @@
 namespace App\Http\Controllers;
 
 
+use App\Models\Note;
 use Illuminate\Http\Request;
 use VK\Client\VKApiClient;
+use Illuminate\Support\Facades\Storage;
 
 class ShopController extends Controller
 {
 
-    public function index($id = 202031912)
+    public function index()
+    {
+        $link = $this->parser('202031912');
+
+        return view('shop/index',['link'=>$link]);
+    }
+
+
+    public function Shop($id)
     {
         $link = $this->parser($id);
 
@@ -20,10 +30,40 @@ class ShopController extends Controller
     {
         return view('shop/land');
     }
+    public function Notes($id = 0)
+    {
 
+        return view('shop/new_note');
+    }
     public function small()
     {
         return view('shop/small');
+    }
+
+    public function  Note_add(Request $request)
+    {
+
+        $path = $request->file('file')->store('public');
+
+       // $file = $request->file('file');
+       // $img = time() . '_' . $file->getClientOriginalName();
+
+      // $file->move(storage_path('/advert'),$img) ;
+
+        $note = new Note();
+        $note->name = $request->input('name');
+        $note->tel = $request->input('tel');
+        $note->category = $request->input('category');
+        $note->img =   $path;          //$request->input('');
+        $note->text = $request->input('text');
+        $note->price = $request->input('price');
+        $note->save();
+
+        $data =  Note::all();
+
+                return view('shop/new_note',['data' => $data]);
+
+
     }
 
     public function order_product(Request  $request)
