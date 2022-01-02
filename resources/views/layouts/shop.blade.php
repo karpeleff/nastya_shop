@@ -138,7 +138,7 @@
                         <ul class="dropdown-menu" role="menu">
                             <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Авто</a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="portfolio_boxed_col_2.html">Продам</a></li>
+                                    <li><a href="/notes">Продам</a></li>
                                     <li><a href="portfolio_boxed_col_3.html">Запчасти</a></li>
                                     <li><a href="portfolio_boxed_col_4.html">Шины диски</a></li>
                                 </ul>
