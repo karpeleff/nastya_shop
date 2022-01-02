@@ -32,8 +32,10 @@ class ShopController extends Controller
     }
     public function Notes($id = 0)
     {
+        
+        $data = Note::paginate(15);
 
-        return view('shop/new_note');
+        return view('shop/notes',['data' => $data]);
     }
     public function small()
     {
@@ -43,7 +45,7 @@ class ShopController extends Controller
     public function  Note_add(Request $request)
     {
 
-        $path = $request->file('file')->store('public');
+        $path = $request->file('file')->store('');
 
        // $file = $request->file('file');
        // $img = time() . '_' . $file->getClientOriginalName();
@@ -59,9 +61,9 @@ class ShopController extends Controller
         $note->price = $request->input('price');
         $note->save();
 
-        $data =  Note::all();
-
-                return view('shop/new_note',['data' => $data]);
+        $data = Note::paginate(15);
+        // $data['category'] = $id;
+        return view('shop/notes',['data' => $data]);
 
 
     }

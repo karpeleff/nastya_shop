@@ -40,23 +40,23 @@
     -->
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <!-- Default stylesheets-->
-    <link href="assets/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Default stylesheets //   -->
+    <link href="{{ asset('assets/lib/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
     <!-- Template specific stylesheets-->
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Volkhov:400i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
-    <link href="assets/lib/animate.css/animate.css" rel="stylesheet">
-    <link href="assets/lib/components-font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="assets/lib/et-line-font/et-line-font.css" rel="stylesheet">
-    <link href="assets/lib/flexslider/flexslider.css" rel="stylesheet">
-    <link href="assets/lib/owl.carousel/dist/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="assets/lib/owl.carousel/dist/assets/owl.theme.default.min.css" rel="stylesheet">
-    <link href="assets/lib/magnific-popup/dist/magnific-popup.css" rel="stylesheet">
-    <link href="assets/lib/simple-text-rotator/simpletextrotator.css" rel="stylesheet">
+    <link href="{{ asset('assets/lib/animate.css/animate.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/lib/components-font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets//lib/et-line-font/et-line-font.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/lib/flexslider/flexslider.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/lib/owl.carousel/dist/assets/owl.carousel.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/lib/owl.carousel/dist/assets/owl.theme.default.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/lib/magnific-popup/dist/magnific-popup.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/lib/simple-text-rotator/simpletextrotator.css') }}" rel="stylesheet">
     <!-- Main stylesheet and color file-->
-    <link href="assets/css/style.css" rel="stylesheet">
-    <link id="color-scheme" href="assets/css/colors/default.css" rel="stylesheet">
+    <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
+    <link id="color-scheme" href="{{ asset('assets/css/colors/default.css') }}" rel="stylesheet">
 </head>
 <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
 <main>
@@ -134,13 +134,13 @@
                             <li><a href="404.html">Page 404</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Обьявления</a>
+                    <li class="dropdown"><a class="dropdown-toggle" href="/notes/05_10" data-toggle="dropdown">Обьявления</a>
                         <ul class="dropdown-menu" role="menu">
-                            <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Авто</a>
+                            <li class="dropdown"><a class="dropdown-toggle" href="05" data-toggle="dropdown">Авто</a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="/notes">Продам</a></li>
-                                    <li><a href="portfolio_boxed_col_3.html">Запчасти</a></li>
-                                    <li><a href="portfolio_boxed_col_4.html">Шины диски</a></li>
+                                    <li><a href="/notes/05_10">Продам авто </a></li>
+                                    <li><a href="/notes/05_11">Запчасти</a></li>
+                                    <li><a href="/notes/05_12">Шины диски</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Отдам бесплатно</a>
@@ -332,18 +332,18 @@
     JavaScripts
     =============================================
     -->
-            <script src="assets/lib/jquery/dist/jquery.js"></script>
-            <script src="assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
-            <script src="assets/lib/wow/dist/wow.js"></script>
-            <script src="assets/lib/jquery.mb.ytplayer/dist/jquery.mb.YTPlayer.js"></script>
-            <script src="assets/lib/isotope/dist/isotope.pkgd.js"></script>
-            <script src="assets/lib/imagesloaded/imagesloaded.pkgd.js"></script>
-            <script src="assets/lib/flexslider/jquery.flexslider.js"></script>
-            <script src="assets/lib/owl.carousel/dist/owl.carousel.min.js"></script>
-            <script src="assets/lib/smoothscroll.js"></script>
-            <script src="assets/lib/magnific-popup/dist/jquery.magnific-popup.js"></script>
-            <script src="assets/lib/simple-text-rotator/jquery.simple-text-rotator.min.js"></script>
-            <script src="assets/js/plugins.js"></script>
-            <script src="assets/js/main.js"></script>
+            <script src="{{ asset('assets/lib/jquery/dist/jquery.js') }}"></script>
+            <script src="{{ asset('assets/lib/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+            <script src="{{ asset('assets/lib/wow/dist/wow.js') }}"></script>
+            <script src="{{ asset('assets/lib/jquery.mb.ytplayer/dist/jquery.mb.YTPlayer.js') }}"></script>
+            <script src="{{ asset('assets/lib/isotope/dist/isotope.pkgd.js') }}"></script>
+            <script src="{{ asset('assets/lib/imagesloaded/imagesloaded.pkgd.js') }}"></script>
+            <script src="{{ asset('assets/lib/flexslider/jquery.flexslider.js') }}"></script>
+            <script src="{{ asset('assets/lib/owl.carousel/dist/owl.carousel.min.js') }}"></script>
+            <script src="{{ asset('assets/lib/smoothscroll.js') }}"></script>
+            <script src="{{ asset('assets/lib/magnific-popup/dist/jquery.magnific-popup.js') }}"></script>
+            <script src="{{ asset('assets/lib/simple-text-rotator/jquery.simple-text-rotator.min.js') }}"></script>
+            <script src="{{ asset('assets/js/plugins.js') }}"></script>
+            <script src="{{ asset('assets/js/main.js') }}"></script>
             </body>
             </html>
