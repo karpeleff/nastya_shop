@@ -72,15 +72,24 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Заказы</a>
                         <ul class="dropdown-menu">
-                            <li><a href="/198253699">Женская одежда</a></li>
-                            <li><a href="">Детская одежда</a></li>
-                            <li><a href="">Мужская одежда</a></li>
-                            <li><a href="/202031912">Нижнее белье</a></li>
-                            <li><a href="">Верхняя одежда</a></li>
-                            <li><a href="">Носки колготки</a></li>
-                            <li><a href="/205928804">Обувь</a></li>
-                            <li><a href="">Парфюмерия Косметика</a></li>
-                            <li><a href="">Электроника</a></li>
+                            <li><a href="{{ asset('shop/201382216')}}">Верхняя одежда</a></li>
+                            <li><a href="{{ asset('shop/202490224')}}">Верхняя одежда</a></li>
+                            <li><a href="{{ asset('shop/193384541')}}">Верхняя одежда</a></li>
+                            <li><a href="{{ asset('shop/161369418')}}">Верхняя одежда</a></li>
+                            <li><a href="{{ asset('shop/183945729')}}">Верхняя одежда</a></li>
+                            <li><a href="{{ asset('shop/172083070')}}">Верхняя одежда</a></li>
+                            <li><a href="{{ asset('shop/192290641')}}">Верхняя одежда</a></li>
+                            <li><a href="{{ asset('shop/151296651')}}">Верхняя одежда</a></li>
+                            <li><a href="{{ asset('shop/191266756')}}">Верхняя одежда</a></li>
+                            <li><a href="{{ asset('shop/203679343')}}">Верхняя одежда</a></li>
+                            <li><a href="{{ asset('shop/199553134')}}">Верхняя одежда</a></li>
+                            <li><a href="{{ asset('shop/199063373')}}">Верхняя одежда</a></li>
+                            <li><a href="{{ asset('shop/201499230')}}">Верхняя одежда</a></li>
+                            <li><a href="{{ asset('shop/182580209')}}">Верхняя одежда</a></li>
+                            <li><a href="{{ asset('shop/197547977')}}">Верхняя одежда</a></li>
+                            <li><a href="{{ asset('shop/184506091')}}">Верхняя одежда</a></li>
+
+
                         </ul>
                     </li>
 
